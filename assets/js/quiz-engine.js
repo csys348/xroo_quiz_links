@@ -43,8 +43,6 @@ function renderQuiz(mission) {
     .join('');
 
   container.innerHTML = `
-    <a href="index.html" class="back-link">← 미션 목록으로</a>
-
     <div class="quiz-panel">
       <div class="mission-label">${mission.missionNum}</div>
       <h2>${mission.title}</h2>
@@ -113,11 +111,10 @@ function initQuizPage() {
 
   if (!mission) {
     document.getElementById('quiz-root').innerHTML = `
-      <a href="index.html" class="back-link">← 미션 목록으로</a>
       <div class="quiz-panel">
         <h2>미션을 찾을 수 없습니다</h2>
         <p style="color:var(--text-muted);margin-top:1rem;">올바른 미션 링크를 확인해 주세요.</p>
-        <a href="index.html" class="btn btn-secondary" style="display:inline-flex;margin-top:1.5rem;">미션 목록 보기</a>
+        <a href="index.html" class="btn btn-secondary" style="display:inline-flex;margin-top:1.5rem;">처음으로</a>
       </div>`;
     return;
   }
@@ -125,25 +122,6 @@ function initQuizPage() {
   renderQuiz(mission);
 }
 
-function initHubPage() {
-  const grid = document.getElementById('mission-grid');
-  if (!grid) return;
-
-  const basePath = window.location.pathname.replace(/\/[^/]*$/, '/');
-
-  grid.innerHTML = HUB_MISSIONS.map((m) => {
-    const themeClass = m.theme === 'ember' ? 'mission-ember' : m.theme === 'time' ? 'mission-time' : '';
-    const href = `${basePath}quiz.html?m=${m.id}`;
-    return `
-      <a href="${href}" class="mission-card ${themeClass}">
-        <div class="mission-num">MISSION ${m.num}</div>
-        <div class="mission-title">${m.title}</div>
-        <div class="mission-desc">${m.desc}</div>
-      </a>`;
-  }).join('');
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-  if (document.getElementById('mission-grid')) initHubPage();
   if (document.getElementById('quiz-root')) initQuizPage();
 });
