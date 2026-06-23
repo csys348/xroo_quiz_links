@@ -469,51 +469,41 @@ body {
 .theme-time .quiz-panel { border-top: 3px solid var(--time-blue); }
 .theme-time .mission-label { color: var(--time-glow); }
 
-/* 링크 복사 */
-.link-box {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  background: var(--bg-deep);
-  border: 1px dashed var(--rail-dark);
-  border-radius: 4px;
-}
-
-.link-box label {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.link-box .link-row {
+.btn-next {
   display: flex;
-  gap: 0.5rem;
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 1rem 1.75rem;
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, #a8841a 100%);
+  color: var(--bg-deep);
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 4px 24px rgba(201, 162, 39, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.link-box input {
-  flex: 1;
-  padding: 0.5rem 0.75rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.75rem;
-  background: var(--bg-panel);
-  border: 1px solid var(--rail-dark);
-  border-radius: 4px;
-  color: var(--text-muted);
+.btn-next:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(201, 162, 39, 0.5);
 }
 
-.link-box .btn-copy {
-  padding: 0.5rem 1rem;
-  font-size: 0.8rem;
-  background: var(--rail-dark);
-  color: var(--text);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  white-space: nowrap;
+.theme-ember .btn-next {
+  background: linear-gradient(135deg, #ff8c5a 0%, var(--ember) 100%);
+  box-shadow: 0 4px 24px rgba(212, 87, 42, 0.4);
 }
 
-.link-box .btn-copy:hover {
-  background: var(--rail);
+.theme-ember .btn-next:hover {
+  box-shadow: 0 8px 32px rgba(212, 87, 42, 0.5);
+}
+
+.theme-time .btn-next {
+  background: linear-gradient(135deg, var(--time-glow) 0%, var(--time-blue) 100%);
+  box-shadow: 0 4px 24px rgba(74, 124, 155, 0.4);
+}
+
+.theme-time .btn-next:hover {
+  box-shadow: 0 8px 32px rgba(74, 124, 155, 0.5);
 }
 
 .back-link {

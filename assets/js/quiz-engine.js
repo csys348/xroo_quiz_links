@@ -55,29 +55,9 @@ function renderQuiz(mission) {
       </form>
       <div id="feedback" class="feedback"></div>
     </div>
-
-    <div class="link-box">
-      <label>이 미션 공유 링크</label>
-      <div class="link-row">
-        <input type="text" id="share-link" readonly />
-        <button type="button" class="btn-copy" id="btn-copy">복사</button>
-      </div>
-    </div>
   `;
 
   document.title = `${mission.title} | 철길숲 기억 복원`;
-
-  const shareInput = document.getElementById('share-link');
-  shareInput.value = window.location.href;
-
-  document.getElementById('btn-copy').addEventListener('click', () => {
-    shareInput.select();
-    navigator.clipboard.writeText(shareInput.value).then(() => {
-      const btn = document.getElementById('btn-copy');
-      btn.textContent = '복사됨!';
-      setTimeout(() => { btn.textContent = '복사'; }, 2000);
-    });
-  });
 
   const form = document.getElementById('quiz-form');
   form.addEventListener('submit', (e) => {
@@ -110,7 +90,11 @@ function checkAnswers(mission) {
 
   if (allCorrect) {
     feedback.className = 'feedback success show';
-    feedback.innerHTML = mission.successMessage.replace(/\n/g, '<br>');
+    const msg = mission.successMessage.replace(/\n/g, '<br>');
+    const btnHtml = mission.nextUrl
+      ? `<a href="${mission.nextUrl}" class="btn btn-next" target="_blank" rel="noopener noreferrer">다음 장소로 이동 →</a>`
+      : '';
+    feedback.innerHTML = msg + btnHtml;
     mission.questions.forEach((_, i) => {
       const input = document.getElementById(`answer-${i}`);
       input.disabled = true;
