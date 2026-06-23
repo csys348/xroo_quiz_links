@@ -15,8 +15,8 @@ const MISSIONS = {
         ],
       },
     ],
-    successMessage:
-      '정답입니다!\n다음 장소로 넘어가는 버튼은 조형물 주변에 있습니다. 버튼을 클릭하여 다음 장소로 이동하세요!',
+    successMessage: '정답입니다! 버튼을 클릭하여 다음 장소로 이동하세요!',
+    nextUrl: 'https://player.xroo.io/space/forail/1?startSceneID=637906',
     errorMessage: '정답을 다시 입력하세요.',
   },
 
@@ -31,8 +31,8 @@ const MISSIONS = {
         answers: ['자연을 보다', 'See Nature', 'see nature', 'See nature'],
       },
     ],
-    successMessage:
-      '정답입니다!\n다음 장소로 넘어가는 버튼은 조형물 주변에 있습니다. 버튼을 클릭하여 다음 장소로 이동하세요!',
+    successMessage: '정답입니다! 버튼을 클릭하여 다음 장소로 이동하세요!',
+    nextUrl: 'https://player.xroo.io/space/forail/1?startSceneID=637895',
     errorMessage: '정답을 다시 입력하세요.',
   },
 
@@ -47,8 +47,8 @@ const MISSIONS = {
         answers: ['고려청자', '고려 청자'],
       },
     ],
-    successMessage:
-      '철로의 기억이 복원되었습니다!\n다음 미션으로 넘어가는 버튼은 빨간 원 안에 숨어 있습니다. 버튼을 클릭하여 다음 장소로 이동하세요!',
+    successMessage: '정답입니다! 버튼을 클릭하여 다음 장소로 이동하세요!',
+    nextUrl: 'https://player.xroo.io/space/forail/1?startSceneID=637905',
     errorMessage: '정답을 다시 입력하세요.',
   },
 
@@ -74,8 +74,8 @@ const MISSIONS = {
         answers: ['천연가스 고갈', '천연 가스 고갈', '가스 고갈', '천연가스 소진'],
       },
     ],
-    successMessage:
-      '불꽃의 기억이 복원되었습니다!\n가장 높은 아파트 상단을 클릭하면 마지막 미션으로 이동할 수 있습니다.',
+    successMessage: '정답입니다! 버튼을 클릭하여 다음 장소로 이동하세요!',
+    nextUrl: 'https://player.xroo.io/space/forail/1?startSceneID=637900',
     errorMessage: '정답을 다시 입력하세요.',
   },
 
@@ -102,8 +102,8 @@ const MISSIONS = {
         answers: ['4'],
       },
     ],
-    successMessage:
-      '시간의 기억이 복원되었습니다!\n\n최종 시간 좌표는 2019. 5. 4, 바로 철길숲이 준공된 날입니다.\n\n이제 마지막 장소로 이동할 차례입니다. 1918 전시객차를 자세히 살펴보세요. 객차를 장식하고 있는 별들 사이에 비밀 버튼이 숨어 있습니다!',
+    successMessage: '정답입니다! 버튼을 클릭하여 다음 장소로 이동하세요!',
+    nextUrl: 'https://player.xroo.io/space/forail/1?startSceneID=637897',
     errorMessage: '정답을 다시 입력하세요.',
   },
 };
