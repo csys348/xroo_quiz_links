@@ -22,9 +22,11 @@ python3 -m http.server 8080
 
 ## GitHub Pages 배포
 
-1. GitHub에 저장소 생성 후 push
-2. 저장소 Settings → Pages → Source: **Deploy from a branch**
-3. Branch: **main**, Folder: **/ (root)**
-4. 배포 URL: `https://<username>.github.io/<repo-name>/`
+`main` 브랜치에 push하면 Actions가 `gh-pages` 브랜치로 자동 배포합니다.
 
-또는 GitHub Actions 워크플로(`.github/workflows/deploy.yml`)를 사용할 수도 있습니다.
+**저장소 소유자(csys348)가 최초 1회만 설정:**
+
+1. 저장소 **Settings → Pages**
+2. Source: **Deploy from a branch**
+3. Branch: **gh-pages** / **/ (root)**
+4. 저장 후 접속: `https://csys348.github.io/xroo_quiz_links/`
