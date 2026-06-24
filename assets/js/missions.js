@@ -93,7 +93,7 @@ const MISSIONS = {
       },
       {
         label: 'Q 2',
-        text: '미션 진행 중 화면에 크게 등장하는 기관사 철이는 총 몇 번 나타나는가?\n(힌트로 등장하는 철이와 이미지 속 철이는 제외)',
+        text: '기관사 체험 콘텐츠의 관전 포인트 개수 또는 기관사 철이가 지금까지 등장한 횟수는 몇 번인가?\n(힌트로 등장하는 철이와 이미지 속 철이는 제외)',
         answers: ['5'],
       },
       {
@@ -102,7 +102,7 @@ const MISSIONS = {
         answers: ['4'],
       },
     ],
-    successMessage: '정답입니다! 링크를 클릭하여 다음 장소로 이동하세요!',
+    successMessage: '기억 조각을 획득했습니다!\n버튼을 클릭하여 다음 장소로 이동하세요.',
     nextUrl: 'https://player.xroo.io/space/forail6',
     errorMessage: '정답을 다시 입력하세요.',
   },
